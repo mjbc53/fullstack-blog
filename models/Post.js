@@ -18,12 +18,18 @@ Post.init(
     //define title
     title: {
       type: DataTypes.STRING(250),
-      allowNull: false
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
     },
     //define post contents
     post_content: {
       type: DataTypes.TEXT,
-      allowNull: false
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
     },
     //define reference to user
     user_id: {

@@ -7,7 +7,7 @@ const bycrypt = require('bcrypt')
 
 
 
-
+//create User model
 class User extends Model {
   //instance to compare passwords when loggin
   checkPassword(loginPW){
@@ -63,3 +63,5 @@ User.init(
     modelName: 'user'
   }
 )
+
+module.exports = User
