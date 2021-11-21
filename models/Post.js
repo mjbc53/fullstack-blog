@@ -25,7 +25,7 @@ Post.init(
     },
     //define post contents
     post_content: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING(5000),
       allowNull: false,
       validate: {
         len: [1]
