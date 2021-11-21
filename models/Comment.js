@@ -49,4 +49,4 @@ Comment.init(
 )
 
 
-module.exports = Comments
+module.exports = Comment
