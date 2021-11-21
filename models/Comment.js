@@ -16,12 +16,9 @@ Comment.init(
       primaryKey: true
     },
     //define comment content
-    commnet_content: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
+    comment_content: {
+      type: DataTypes.STRING(500),
+      allowNull: false
     },
     //define reference to user table
     user_id: {
