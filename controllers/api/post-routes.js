@@ -32,7 +32,20 @@ router.get('/:id', (req, res) => {
   Post.findOne({
     where: {
       id: req.params.id
-    }
+    },
+    attributes: [
+      'id',
+      'title',
+      'post_content',
+      'user_id',
+      'created_at'
+    ],
+    include: [
+      {
+        model: User,
+        attributes: [ 'Username']
+      }
+    ]
   })
   .then( dbPostData => {
     if(!dbPostData){
@@ -62,7 +75,47 @@ router.post('/', (req, res) => {
 })
 
 
+//Update post
+router.put('/:id', (req, res) => {
+  Post.update(req.body, {
+    where: {
+      id: req.params.id
+    }
+  })
+  .then(dbPostData => {
+    if(!dbPostData){
+      res.status(404).json({ message: 'No post with that id'})
+      return
+    }
 
+    res.json(dbPostData)
+  })
+  .catch( err => {
+    console.log(err)
+    res.status(500).json(err)
+  })
+})
+
+
+//Delete post
+router.delete('/:id', (req, res) => {
+  Post.destroy({
+    where: {
+      id: req.params.id
+    }
+  })
+  .then( dbPostData => {
+    if(!dbPostData){
+      res.status(404).json({ message: 'No post with that id'})
+      return
+    }
+    res.json(dbPostData)
+  })
+  .catch(err => {
+    console.log(err)
+    res.status(500).json(err)
+  })
+})
 
 
 
