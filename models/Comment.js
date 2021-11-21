@@ -18,7 +18,10 @@ Comment.init(
     //define comment content
     comment_content: {
       type: DataTypes.STRING(500),
-      allowNull: false
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
     },
     //define reference to user table
     user_id: {
