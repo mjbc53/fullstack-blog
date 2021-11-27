@@ -1,0 +1,224 @@
+/* page colors stored in variables */
+:root {
+  --grey: #605F5E;
+  --darkBlue: #1D3461;
+  --blue: #1F487E;
+  --lightBlue: #247BA0;
+  --textColor: #F2F4F3;
+}
+
+/* default page styling */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* body styling */
+body{
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* p tage styling */
+p {
+  line-height: 1.75rem;
+  font-size: 1.1rem;
+}
+
+/* label styling */
+label{
+  font-size: 1.25rem;
+}
+
+/* input styling */
+input{
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid var(--grey);
+  font-size: 1.25rem;
+}
+
+/* margin left */
+.ml {
+  margin-left: 3rem;
+}
+
+/* margin top */
+.mt{
+  margin-top: 2rem;
+}
+
+/* margin bottom */
+.mb{
+  margin-bottom: 2rem;
+}
+
+/* nav section styling */
+nav {
+  display: flex ;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: var(--darkBlue);
+  flex-wrap: wrap;
+}
+
+/* nav items/link div styling */
+.nav-items {
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+/* nav links styling */
+.nav-link {
+ text-decoration: none;
+ font-size: 1.5rem;
+ /* color: lightcoral; */
+ color: var(--textColor);
+}
+
+/* nav button for logging out style */
+.nav-btn {
+  display: inline-block;
+  border: none;
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: inherit;
+  font-family: inherit;
+  color: var(--textColor);
+}
+
+/* nav page title style */
+.nav-title {
+  margin-left: 1rem;
+  padding-top: 1rem;
+  color: var(--textColor);
+  padding: 10px 50px 10px 50px;
+  background-color: var(--blue);
+  border-radius: 25px;
+  box-shadow: 15px 5px 0px var(--lightBlue) ;
+}
+
+/* content divs styling */
+.content{
+  width: 100%;
+  padding: 2% 10% 2% 10%;
+}
+
+/* titles for content divs styling */
+.title{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1% 1% 1% 1%;
+  align-items: center;
+  background-color: var(--darkBlue);
+  color: var(--textColor);
+}
+
+/* border styling for content style */
+.border{
+  border: solid 3px var(--darkBlue);
+}
+
+/* post content stlying */
+.post-content{
+  width: 100%;
+  padding: 2% 1% 2% 1%;
+}
+
+
+
+/* login/sign form styling */
+.loginSignup-form {
+  width: 100%;
+  padding: 2% 1% 0 1%;
+  display: flex;
+  justify-content: center;
+}
+
+/* submit btn for login/ signup form */
+.submit-btn{
+  width: 30%;
+  align-self: center;
+  margin-bottom: 3%;
+  padding: 10px 20px 10px 20px;
+  font-size: 1.25rem;
+  border: none;
+  text-decoration: none;
+  background-color: var(--blue);
+  color: var(--textColor);
+  border-radius: 25px;
+  box-shadow: 5px 5px var(--lightBlue);
+}
+
+/* submit button hover styling */
+.submit-btn:hover, .NP-btn:hover{
+  box-shadow: none;
+}
+
+/* inputs for forms styling */
+.inputs{
+  display: flex;
+  width: 45%;
+  flex-flow: column wrap;
+}
+
+/* comments title styling */
+.comments-title{
+  color: var(--darkBlue);
+  margin-bottom: 1%;
+}
+
+/* comments styling */
+.comment {
+  border: solid 3px var(--darkBlue);
+  width: 100%;
+  padding: 2% 1% 2% 1%;
+  margin-bottom: 1%;
+}
+
+.comment-user{
+  font-style: italic;
+}
+
+/* new post div styling */
+
+.NP-form{
+  width: 100%;
+  padding: 2% 1% 0 1%;
+  display: flex;
+  justify-content: center;
+}
+
+.NP-inputs{
+  display: flex;
+  width: 100%;
+  flex-flow: column wrap;
+}
+
+.NP-btn{
+  width: 30%;
+  align-self: center;
+  margin-bottom: 3%;
+  padding: 10px 20px 10px 20px;
+  font-size: 1.25rem;
+  border: none;
+  text-decoration: none;
+  background-color: var(--blue);
+  color: var(--textColor);
+  border-radius: 25px;
+  box-shadow: 5px 5px var(--lightBlue)
+}
+
+.NP {
+  display: flex;
+  justify-content: center;
+}
+
+textarea{
+  font-size: 1.25rem;
+}
