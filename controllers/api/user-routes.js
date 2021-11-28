@@ -45,7 +45,7 @@ router.get('/:id', (req, res) => {
 })
 
 
-//create user by id
+//create user
 router.post('/', (req, res) => {
   User.create({
     username: req.body.username,
@@ -129,7 +129,6 @@ router.post('/login', (req, res) => {
       return
     }
 
-    
     req.session.save( () => {
       req.session.user_id = dbUserData.id
       req.session.username = dbUserData.username

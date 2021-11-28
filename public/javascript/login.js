@@ -1,10 +1,12 @@
-const loginBtn = document.querySelector('#login-btn')
-const signupBtn = document.querySelector('#signup-btn')
+const loginBtn = document.querySelector('#login-form')
+const signupBtn = document.querySelector('#signup-form')
 
-async function signupFormHandler (event){
+async function signupFormHandler(event){
   event.preventDefault()
-  const username = document.querySelector('#username-signup')
-  const password = document.querySelector('#password-signup')
+  const username = document.querySelector('#username-signup').value.trim()
+  const password = document.querySelector('#password-signup').value.trim()
+
+  console.log(username, password)
 
   if( username && password){
     const response = await fetch('/api/users', {
@@ -23,8 +25,6 @@ async function signupFormHandler (event){
     }else{
       alert(response.statusText)
     }
-  }else{
-    alert('Something was enter incorrectly')
   }
 }
 
@@ -32,10 +32,10 @@ async function signupFormHandler (event){
 async function loginFormHandler (event){
   event.preventDefault()
  
-  const username = document.querySelector('#username-login')
-  const password = document.querySelector('#password-login')
+  const username = document.querySelector('#username-login').value.trim()
+  const password = document.querySelector('#password-login').value.trim()
 
-  if( username && password){
+  if(username && password){
     const response = await fetch('/api/users/login', {
       method: 'POST',
       body: JSON.stringify({
@@ -52,12 +52,10 @@ async function loginFormHandler (event){
     }else{
       alert(response.statusText)
     }
-  }else{
-    alert('Something was enter incorrectly')
   }
 }
 
 
-loginBtn.addEventListener('click', loginFormHandler)
+loginBtn.addEventListener('submit', loginFormHandler)
 
-signupBtn.addEventListener('click', signupFormHandler)
+signupBtn.addEventListener('submit', signupFormHandler)
