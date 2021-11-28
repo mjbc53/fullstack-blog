@@ -33,16 +33,18 @@ router.get('/:id', (req, res) => {
 
 //Create a new comment
 router.post('/', (req, res) => {
-  Comment.create({
-    comment_content: req.body.comment_content,
-    user_id: req.session.user_id,
-    post_id: req.body.post_id
-  })
-  .then( dbCommentData => res.json(dbCommentData))
-  .catch(err => {
-    console.log(err)
-    res.status(500).json(err)
-  })
+  if(req.session){
+    Comment.create({
+      comment_content: req.body.comment_content,
+      user_id: req.session.user_id,
+      post_id: req.body.post_id
+    })
+    .then( dbCommentData => res.json(dbCommentData))
+    .catch( err => {
+      console.log(err)
+      res.status(500).json(err)
+    })
+  }
 })
 
 //Update a comment by id
