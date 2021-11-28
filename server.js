@@ -13,7 +13,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store)
 
 const sess = {
   secret: 'Super secret secret',
-  cookie: {},
+  cookie: { expires: new Date(Date.now() + 36000000)},
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({

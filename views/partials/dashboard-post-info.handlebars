@@ -1,0 +1,15 @@
+<div class="content" id="content">
+    <div class="border">
+      <div class="title">
+        <h2><a href="/post/{{id}}" class="post-title">{{title}}</a></h2>
+        <p> Posted by <span>{{user.username}}</span> on <span>{{format_date created_at}}</span></p>
+      </div>
+      <div class="post-content">
+        <p class="post-p">{{post_content}}</p>
+      </div>
+    </div>
+    <div class="center-flex">
+      <button type="click" id='update-post' class="m feature-btn feature-update">Update Post</button>
+      <button type="click" id="delete-post" class="m feature-btn feauture-delete">Delete Post</button>
+    </div>
+  </div>

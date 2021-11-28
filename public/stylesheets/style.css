@@ -1,10 +1,15 @@
 /* page colors stored in variables */
 :root {
+  --black: black;
   --grey: #605F5E;
   --darkBlue: #1D3461;
   --blue: #1F487E;
   --lightBlue: #247BA0;
   --textColor: #F2F4F3;
+  --red: #D00000;
+  --darkRed: #6A040F;
+  --teal: #80FFDB;
+  --darkTeal: #48BFE3;
 }
 
 /* default page styling */
@@ -237,4 +242,36 @@ nav {
 /* margin bottom */
 .mb{
   margin-bottom: 2rem;
+}
+
+/* margin all around */
+.m{
+margin: 1%;
+}
+
+/* Delete/update button styling */
+.feature-btn{
+  width: 30%;
+  align-self: center;
+  margin-bottom: 3%;
+  padding: 10px 20px 10px 20px;
+  font-size: 1.25rem;
+  border: none;
+  text-decoration: none;
+  border-radius: 25px ;
+  color: var(--black);
+}
+
+.feauture-delete{
+  background-color: var(--red);
+  box-shadow: 5px 5px var(--darkRed)
+}
+
+.feature-update{
+  background-color: var(--teal);
+  box-shadow: 5px 5px var(--darkTeal);
+}
+
+.feature-btn:hover{
+  box-shadow: none;
 }
