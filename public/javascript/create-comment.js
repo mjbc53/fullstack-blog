@@ -24,7 +24,7 @@ async function submitNewCommentHandler (event){
   ]
 
   if(comment_content){
-    const response = await fetch('/api/comment', {
+    const response = await fetch('/api/comments', {
       method: 'POST',
       body: JSON.stringify({
         post_id,
@@ -44,12 +44,6 @@ async function submitNewCommentHandler (event){
   
 
 }
-
-
-
-
-
-
 
 newCommentBtn.addEventListener('click', displayFormHandler)
 

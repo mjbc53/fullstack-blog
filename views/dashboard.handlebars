@@ -1,0 +1,25 @@
+  <div>
+    {{#each posts as |post|}}
+    {{> post-info post}}
+    {{/each}}
+  </div>
+
+  <div class="content">
+      <form class="new-form" id="new-post-form">
+        <div class="form-inputs">
+
+          <label for="new-post-title" class="mt title">Post Title</label>
+          <input type="text" id="new-post-title" class="mt">
+
+          <label for="new-post-content" class="mt title">Post Content</label>
+          <textarea id="new-post-content" class="mt" rows="10"></textarea>
+
+          <button type="submit" class="submit-btn mt" id="submit-post-btn">Submit</button>
+        </div>
+      </form>
+    <div class="center-flex mt">
+      <button type="button" class="new-btn" id="new-post-btn">New Post</button>
+    </div>
+  </div>
+
+<script src="/javascript/create-post.js"></script>
