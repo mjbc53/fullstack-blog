@@ -2,6 +2,7 @@ const router = require('express').Router()
 const seqeulize = require('../config/connection')
 const {Post, Comment, User} = require('../models')
 
+//get all posts for home page to render them
 router.get('/', (req, res) => {
   Post.findAll({
     attributes: [
@@ -28,6 +29,7 @@ router.get('/', (req, res) => {
   })
 })
 
+//render login page
 router.get('/login', (req, res) => {
   if(req.session.loggedIn){
     res.redirect('/')
@@ -37,6 +39,7 @@ router.get('/login', (req, res) => {
   res.render('login')
 })
 
+//get post by id and render single-post
 router.get('/post/:id', (req, res) => {
   Post.findOne({
     where: {

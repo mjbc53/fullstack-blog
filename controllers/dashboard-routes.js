@@ -3,6 +3,7 @@ const sequelize = require('../config/connection')
 const {Post, User , Comment} = require('../models')
 
 
+//get all posts by user to display to user dashboard
 router.get('/', (req, res) => {
   Post.findAll({
     where: {
@@ -33,6 +34,7 @@ router.get('/', (req, res) => {
 })
 
 
+//get post by id to update it
 router.get('/update/:id', (req, res) => {
   Post.findOne({
     where:{
