@@ -1,0 +1,27 @@
+<div>
+  {{> post-info post}}
+</div>
+
+<div class="content"> 
+    <h3 class="comments-title">Comments</h3>
+    {{#each post.comments as |comment|}}
+    {{> comment-info comment}}
+    {{/each}}
+</div>
+
+
+<div class="content">
+  <form class="new-form">
+    <div class="form-inputs">
+      <label for="comment-content" class="title mt">Comment content</label>
+      <textarea id="comment-content" class="mt" rows="10"></textarea>
+      <button type="submit" class="submit-btn mt" id="NC-Submit">submit</button>
+    </div>
+  </form>
+ 
+ <div class="center-flex">
+  <button type="button" class="new-btn">New Comment</button>
+ </div>
+  
+</div>
+ 

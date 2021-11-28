@@ -40,19 +40,9 @@ input{
   font-size: 1.25rem;
 }
 
-/* margin left */
-.ml {
-  margin-left: 3rem;
-}
-
-/* margin top */
-.mt{
-  margin-top: 2rem;
-}
-
-/* margin bottom */
-.mb{
-  margin-bottom: 2rem;
+/* text area styling */
+textarea{
+  font-size: 1.25rem;
 }
 
 /* nav section styling */
@@ -130,6 +120,16 @@ nav {
   padding: 2% 1% 2% 1%;
 }
 
+/* post title styling */
+.post-title{
+  color: var(--textColor);
+  text-decoration: none;
+}
+
+/* post link hover styling */
+.post-title:hover{
+  color: var(--lightBlue);
+}
 
 
 /* login/sign form styling */
@@ -140,25 +140,7 @@ nav {
   justify-content: center;
 }
 
-/* submit btn for login/ signup form */
-.submit-btn{
-  width: 30%;
-  align-self: center;
-  margin-bottom: 3%;
-  padding: 10px 20px 10px 20px;
-  font-size: 1.25rem;
-  border: none;
-  text-decoration: none;
-  background-color: var(--blue);
-  color: var(--textColor);
-  border-radius: 25px;
-  box-shadow: 5px 5px var(--lightBlue);
-}
 
-/* submit button hover styling */
-.submit-btn:hover, .NP-btn:hover{
-  box-shadow: none;
-}
 
 /* inputs for forms styling */
 .inputs{
@@ -180,27 +162,14 @@ nav {
   padding: 2% 1% 2% 1%;
   margin-bottom: 1%;
 }
-
+/* username font styling */
 .comment-user{
   font-style: italic;
 }
 
-/* new post div styling */
-
-.NP-form{
-  width: 100%;
-  padding: 2% 1% 0 1%;
-  display: flex;
-  justify-content: center;
-}
-
-.NP-inputs{
-  display: flex;
-  width: 100%;
-  flex-flow: column wrap;
-}
-
-.NP-btn{
+/* shared classes */
+/* new button to add/hide/show content on html page */
+.new-btn{
   width: 30%;
   align-self: center;
   margin-bottom: 3%;
@@ -214,11 +183,58 @@ nav {
   box-shadow: 5px 5px var(--lightBlue)
 }
 
-.NP {
+/* submit buttn to submit new post or comment */
+.submit-btn{
+  width: 30%;
+  align-self: center;
+  margin-bottom: 3%;
+  padding: 10px 20px 10px 20px;
+  font-size: 1.25rem;
+  border: none;
+  text-decoration: none;
+  background-color: var(--blue);
+  color: var(--textColor);
+  border-radius: 25px;
+  box-shadow: 5px 5px var(--lightBlue);
+}
+
+/* submit button and new button hover styling */
+.submit-btn:hover, .new-btn:hover{
+  box-shadow: none;
+}
+
+/* display flex and justify center */
+.center-flex{
   display: flex;
   justify-content: center;
 }
 
-textarea{
-  font-size: 1.25rem;
+/* new form class */
+.new-form{
+  width: 100%;
+  padding: 2% 1% 0 1%;
+  display: flex;
+  justify-content: center;
+}
+
+/* form inputs class */
+.form-inputs{
+  display: flex;
+  width: 100%;
+  flex-flow: column wrap;
+}
+
+/* margin left */
+.ml {
+  margin-left: 3rem;
+}
+
+/* margin top */
+.mt{
+  margin-top: 2rem;
+}
+
+/* margin bottom */
+.mb{
+  margin-bottom: 2rem;
 }
