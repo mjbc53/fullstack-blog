@@ -1,0 +1,16 @@
+<div class="content">
+    <form class="new-form" id="new-post-form">
+      <div class="form-inputs">
+
+        <label for="update-post-title" class="mt title">Post Title</label>
+        <textarea id='update-post-title' class="mt">{{post.title}}</textarea>
+
+        <label for="update-post-content" class="mt title">Post Content</label>
+        <textarea id="update-post-content" class="mt" rows="10"> {{post.post_content}}</textarea>
+
+        <button type="submit" class="submit-btn mt" id="submit-post-btn">Submit</button>
+      </div>
+    </form>
+</div>
+
+<script src="/javascript/update-post.js"></script>

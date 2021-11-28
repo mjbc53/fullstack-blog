@@ -24,10 +24,4 @@ async function deletePostHandler (event){
   }
 }
 
-async function updatePostHandler (event) {
-  event.preventDefault()
-
-  
-}
-
 deleteBtn.addEventListener('click', deletePostHandler)
