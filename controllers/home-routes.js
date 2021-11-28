@@ -52,7 +52,7 @@ router.get('/post/:id', (req, res) => {
     include: [
       {
         model: Comment,
-        attributes: ['id', 'comment_content', 'user_id'],
+        attributes: ['id', 'comment_content', 'user_id', 'created_at'],
         include: {
           model: User,
           attributes: ['username']
@@ -71,7 +71,6 @@ router.get('/post/:id', (req, res) => {
     }
 
     const post = dbPostData.get({plain: true})
-    
     res.render('single-post', {post, loggedIn: req.session.loggedIn})
   })
   .catch(err => {
