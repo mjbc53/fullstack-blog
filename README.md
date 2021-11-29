@@ -5,6 +5,7 @@
 * [Code Description](#CodeDescription)
 * [Usage](#usage)
 * [Links](#links)
+* [Screenshots](#Screenshots)
 * [Questions](#questions)
 
 
@@ -43,7 +44,13 @@ of a post can click the comment button.
 
 
 ## Links
+* [The Fullstack Blog link](https://the-fullstack-blog.herokuapp.com/)
+* [The Github repo link](https://github.com/mjbc53/fullstack-blog)
 
+## Screenshots
+<img src='./public/page-screenshots/Homepage.jpg'>
+<img src='./public/page-screenshots/Dashboard.jpg'>
+<img src='./public/page-screenshots/Loginpage.png'>
 
 ## Questions
 If you have any further questions please contact me by email or with my GitHub Username listed below
