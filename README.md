@@ -1,4 +1,4 @@
-# The Fullstack Blog\
+# The Fullstack Blog
 
 ## Table of contents 
 * [Description](#description)
