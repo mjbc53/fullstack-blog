@@ -1,5 +1,10 @@
 # The Fullstack Blog
 
+## Description
+Welcome to the Fullstack Blog. A blog for anything coding. This is a fullstack
+web application that I have built from the ground up. It is a very basic user
+friendly website
+
 ## Table of contents 
 * [Description](#description)
 * [Code Description](#CodeDescription)
@@ -8,11 +13,6 @@
 * [Screenshots](#Screenshots)
 * [Questions](#questions)
 
-
-## Description
-Welcome to the Fullstack Blog. A blog for anything coding. This is a fullstack
-web application that I have built from the ground up. It is a very basic user
-friendly website
 
 ## Code Description
 The coding languages, packages and wireframes used to create this web app.
